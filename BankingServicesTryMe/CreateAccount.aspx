@@ -13,6 +13,9 @@
                     <asp:Label runat="server" AssociatedControlID="AccountNumber" CssClass="col-md-6 control-label">Account number</asp:Label>
                     <div class="col-md-6">
                         <asp:TextBox runat="server" ID="AccountNumber" CssClass="form-control" placeholder="best to use 4 digit numbers" />
+                        <asp:RegularExpressionValidator runat="server"
+                            ControlToValidate="AccountNumber" ValidationExpression="^\d+$"
+                            ErrorMessage="Please enter numbers only (e.g., 4444)." Display="Dynamic" SetFocusOnError="True" />
                         <asp:RequiredFieldValidator runat="server" ControlToValidate="AccountNumber"
                             CssClass="text-danger" ErrorMessage="The account number field is required." />
                     </div>
@@ -28,7 +31,10 @@
                 <div class="form-group">
                     <asp:Label runat="server" AssociatedControlID="AccountBalance" CssClass="col-md-6 control-label">Account balance</asp:Label>
                     <div class="col-md-6">
-                        <asp:TextBox runat="server" ID="AccountBalance" CssClass="form-control" />
+                        <asp:TextBox runat="server" ID="AccountBalance" CssClass="form-control" placeholder="e.g., 1000 or 1000.50" />
+                        <asp:RegularExpressionValidator runat="server"
+                            ControlToValidate="AccountBalance" ValidationExpression="^\d+(\.\d\d)?$"
+                            ErrorMessage="Please enter numbers only (e.g., 1000 or 1000.50)." Display="Dynamic" SetFocusOnError="True" />
                         <asp:RequiredFieldValidator runat="server" ControlToValidate="AccountBalance"
                             CssClass="text-danger" ErrorMessage="The account balance field is required." />
                     </div>

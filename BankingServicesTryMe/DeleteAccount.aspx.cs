@@ -28,7 +28,7 @@ namespace BankingServicesTryMe
                 }
             }
             myPxy.Close();
-            Status.Text = "Deletion: Unsuccessful";
+            Status.Text = "Account deletion: Unsuccessful";
         }
     }
 }

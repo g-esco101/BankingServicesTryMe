@@ -16,6 +16,9 @@
                     <asp:Label runat="server" AssociatedControlID="Nickname" CssClass="col-md-6 control-label">Source account nickname</asp:Label>
                     <div class="col-md-6">
                         <asp:TextBox runat="server" ID="Nickname" CssClass="form-control" />
+                        <asp:RegularExpressionValidator runat="server"
+                            ControlToValidate="Nickname" ValidationExpression="^[A-Za-z]*$"
+                            ErrorMessage="Please enter letters only." Display="Dynamic" SetFocusOnError="True" />
                         <asp:RequiredFieldValidator runat="server" ControlToValidate="Nickname"
                             CssClass="text-danger" ErrorMessage="The source account field is required." />
                     </div>
@@ -24,6 +27,9 @@
                     <asp:Label runat="server" AssociatedControlID="dNickname" CssClass="col-md-6 control-label">Destination account nickname</asp:Label>
                     <div class="col-md-6">
                         <asp:TextBox runat="server" ID="dNickname" CssClass="form-control" />
+                        <asp:RegularExpressionValidator runat="server"
+                            ControlToValidate="dNickname" ValidationExpression="^[A-Za-z]*$"
+                            ErrorMessage="Please enter letters only." Display="Dynamic" SetFocusOnError="True" />
                         <asp:RequiredFieldValidator runat="server" ControlToValidate="dNickname"
                             CssClass="text-danger" ErrorMessage="The destination account field is required." />
                     </div>
@@ -31,7 +37,10 @@
                 <div class="form-group">
                     <asp:Label runat="server" AssociatedControlID="Amount" CssClass="col-md-6 control-label">Amount</asp:Label>
                     <div class="col-md-6">
-                        <asp:TextBox runat="server" ID="Amount" CssClass="form-control" />
+                        <asp:TextBox runat="server" ID="Amount" CssClass="form-control" placeholder="e.g., 1000 or 1000.50" />
+                        <asp:RegularExpressionValidator runat="server"
+                            ControlToValidate="Amount" ValidationExpression="^\d+(\.\d\d)?$"
+                            ErrorMessage="Please enter numbers only (e.g., 1000 or 1000.50)." Display="Dynamic" SetFocusOnError="True" />
                         <asp:RequiredFieldValidator runat="server" ControlToValidate="Amount"
                             CssClass="text-danger" ErrorMessage="The amount field is required." />
                     </div>
@@ -86,7 +95,7 @@
             <td>string (source account nickname), string (destination account nickname), string (amount)</td>
             <td>string (source account new balance)</td>
             <td>Given the account nicknames & the amount, it transfers the amount from the source account to the destination account & returns the source account's new balance.</td>
-            <td>Uses LINQ to XML. Invokes BankingRestServices Addition & Subtraction restful service written by Govinda Escobar at http://localhost:54118/Service.svc </td>
+            <td>Uses TransactionScope to ensure both accounts are updated. Uses LINQ to XML. Invokes BankingRestServices Addition & Subtraction restful service written by Govinda Escobar at http://localhost:54118/Service.svc </td>
         </tr>
     </table>
 </asp:Content>

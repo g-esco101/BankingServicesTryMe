@@ -15,6 +15,9 @@
                     <asp:Label runat="server" AssociatedControlID="Nickname" CssClass="col-md-6 control-label">Nickname</asp:Label>
                     <div class="col-md-6">
                         <asp:TextBox runat="server" ID="Nickname" CssClass="form-control" />
+                        <asp:RegularExpressionValidator runat="server"
+                            ControlToValidate="Nickname" ValidationExpression="^[A-Za-z]*$"
+                            ErrorMessage="Please enter letters only." Display="Dynamic" SetFocusOnError="True" />
                         <asp:RequiredFieldValidator runat="server" ControlToValidate="Nickname"
                             CssClass="text-danger" ErrorMessage="The Nickname field is required." />
                     </div>
@@ -22,7 +25,10 @@
                 <div class="form-group">
                     <asp:Label runat="server" AssociatedControlID="Amount" CssClass="col-md-6 control-label">Amount</asp:Label>
                     <div class="col-md-6">
-                        <asp:TextBox runat="server" ID="Amount" CssClass="form-control" />
+                        <asp:TextBox runat="server" ID="Amount" CssClass="form-control" placeholder="e.g., 1000 or 1000.50" />
+                        <asp:RegularExpressionValidator runat="server"
+                            ControlToValidate="Amount" ValidationExpression="^\d+(\.\d\d)?$"
+                            ErrorMessage="Please enter numbers only (e.g., 1000 or 1000.50)." Display="Dynamic" SetFocusOnError="True" />
                         <asp:RequiredFieldValidator runat="server" ControlToValidate="Amount"
                             CssClass="text-danger" ErrorMessage="The amount field is required." />
                     </div>

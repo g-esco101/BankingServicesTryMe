@@ -15,6 +15,9 @@
                     <asp:Label runat="server" AssociatedControlID="Nickname" CssClass="col-md-6 control-label">Nickname</asp:Label>
                     <div class="col-md-6">
                         <asp:TextBox runat="server" ID="Nickname" CssClass="form-control" />
+                        <asp:RegularExpressionValidator runat="server"
+                            ControlToValidate="Nickname" ValidationExpression="^[A-Za-z]*$"
+                            ErrorMessage="Please enter letters only." Display="Dynamic" SetFocusOnError="True" />
                         <asp:RequiredFieldValidator runat="server" ControlToValidate="Nickname"
                             CssClass="text-danger" ErrorMessage="The Nickname field is required." />
                     </div>

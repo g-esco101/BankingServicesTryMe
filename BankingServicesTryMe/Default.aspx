@@ -4,22 +4,22 @@
 
     <div class="row">
         <div class="col-md-4">
-            <h2>Banking Services</h2>
+            <h2>About</h2>
             <p>
                 The Banking Services API is comprised of SOAP services, some of which consume the RESTFul services in the BankingRestServices repository.
-                These Banking Services are consumed by the project in the SOCBankingWebApp repository.
+                These Banking Services are consumed by the project in the SOCBankingWebApp repository. It supports only one account per owner. 
             </p>
         </div>
         <div class="col-md-4">
             <h2>Service Testing</h2>
             <p>
-                It supports only one account per owner. Each service has its own web page where it can be tried. The service name, input & output types, description, & comments are provided on each page.
+                Each service has its own web page where it can be tried. The service name, input & output types, description, & comments are provided on each page.
             </p>
         </div>
         <div class="col-md-4">
             <h2>Web Hosting</h2>
             <p>
-                The Banking Services are self-hosted, so it is necessary to run visual studio as an administrator to be able to receive requests. 
+                The Banking Services are self-hosted, so it is necessary to run visual studio as an administrator when running the project in the BankingServices repository. 
             </p>
         </div>
     </div>
