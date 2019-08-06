@@ -58,26 +58,9 @@
             </div>
         </div>
     </div>
-    <style>
-        table {
-            font-family: arial, sans-serif;
-            border-collapse: collapse;
-            width: 100%;
-        }
-
-        td, th {
-            border: 1px solid #dddddd;
-            text-align: left;
-            padding: 8px;
-        }
-
-        tr:nth-child(odd) {
-            background-color: #dddddd;
-        }
-    </style>
-    <table>
+    <table class="table1">
         <tr>
-            <th>Name</th>
+            <th>Service name</th>
             <th>Input types</th>
             <th>Output type</th>
             <th>Service description</th>
@@ -87,8 +70,8 @@
             <td>UpdatePassword</td>
             <td>string (account owner), string (current password), string (new password), string (new password)</td>
             <td>boolean</td>
-            <td>Returns true if the password is updated successfully in Accounts.xml.</td>
-            <td>Uses LINQ to XML. Consumes the RESTful HashService  written by Govinda Escobar at http://localhost:54118/Service.svc. It uses SHA512CryptoServiceProvider & generates a password by using the user name as salt & hashing it with the password.</td>
+            <td>Returns true if the password is updated successfully in the Accounts.xml in the BankingServices project.</td>
+            <td>Uses LINQ to XML. Consumes the RESTful HashService written by Govinda Escobar at http://localhost:54118/Service.svc. It uses SHA512CryptoServiceProvider & generates a password by using the user name as salt & hashing it with the password (the salt will be updated to be a 128 bit random number).</td>
         </tr>
     </table>
 </asp:Content>

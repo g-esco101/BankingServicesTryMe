@@ -53,26 +53,9 @@
             </div>
         </div>
     </div>
-    <style>
-        table {
-            font-family: arial, sans-serif;
-            border-collapse: collapse;
-            width: 100%;
-        }
-
-        td, th {
-            border: 1px solid #dddddd;
-            text-align: left;
-            padding: 8px;
-        }
-
-        tr:nth-child(odd) {
-            background-color: #dddddd;
-        }
-    </style>
-    <table>
+    <table class="table1">
         <tr>
-            <th>Name</th>
+            <th>Service name</th>
             <th>Input types</th>
             <th>Output type</th>
             <th>Service description</th>
@@ -82,7 +65,7 @@
             <td>Deposit</td>
             <td>string (nickname), string (amount)</td>
             <td>string (new balance)</td>
-            <td>Given the account nickname & the amount, it adds the amount to the balance & returns the new balance.</td>
+            <td>Given the account nickname & the amount, it adds the amount to the balance, updates the balance in the Accounts.xml file in the BankingServices project, & returns the new balance.</td>
             <td>Uses LINQ to XML. Invokes BankingRestServices Addition restful service written by Govinda Escobar at http://localhost:54118/Service.svc </td>
         </tr>
     </table>

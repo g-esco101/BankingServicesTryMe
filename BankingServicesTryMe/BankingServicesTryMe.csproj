@@ -115,6 +115,7 @@
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
+    <Content Include="Content\MyStyleSheet.css" />
     <Content Include="CreateAccount.aspx" />
     <Content Include="DeleteAccount.aspx" />
     <Content Include="GetFile.aspx" />

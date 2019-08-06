@@ -33,26 +33,9 @@
             </div>
         </div>
     </div>
-    <style>
-        table {
-            font-family: arial, sans-serif;
-            border-collapse: collapse;
-            width: 100%;
-        }
-
-        td, th {
-            border: 1px solid #dddddd;
-            text-align: left;
-            padding: 8px;
-        }
-
-        tr:nth-child(odd) {
-            background-color: #dddddd;
-        }
-    </style>
-    <table>
+    <table class="table1">
         <tr>
-            <th>Name</th>
+            <th>Service name</th>
             <th>Input types</th>
             <th>Output type</th>
             <th>Service description</th>

@@ -65,26 +65,9 @@
             </div>
         </div>
     </div>
-    <style>
-        table {
-            font-family: arial, sans-serif;
-            border-collapse: collapse;
-            width: 100%;
-        }
-
-        td, th {
-            border: 1px solid #dddddd;
-            text-align: left;
-            padding: 8px;
-        }
-
-        tr:nth-child(odd) {
-            background-color: #dddddd;
-        }
-    </style>
-    <table>
+    <table class="table1">
         <tr>
-            <th>Name</th>
+            <th>Service name</th>
             <th>Input types</th>
             <th>Output type</th>
             <th>Service description</th>
@@ -94,7 +77,7 @@
             <td>Transfer</td>
             <td>string (source account nickname), string (destination account nickname), string (amount)</td>
             <td>string (source account new balance)</td>
-            <td>Given the account nicknames & the amount, it transfers the amount from the source account to the destination account & returns the source account's new balance.</td>
+            <td>Given the account nicknames & the amount, it transfers the amount from the source account to the destination account, updates the balances in the Accounts.xml file in the BankingServices project,  & returns the source account's new balance.</td>
             <td>Uses TransactionScope to ensure both accounts are updated. Uses LINQ to XML. Invokes BankingRestServices Addition & Subtraction restful service written by Govinda Escobar at http://localhost:54118/Service.svc </td>
         </tr>
     </table>

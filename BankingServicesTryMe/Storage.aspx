@@ -22,29 +22,9 @@
     </div>
     <asp:Label runat="server" AssociatedControlID="fServerPath">Path on service's server</asp:Label>
     <asp:Label runat="server" ID="fServerPath"></asp:Label>
-    <div>
-        <asp:Xml ID="Xml1" runat="server"></asp:Xml>
-    </div>
-    <style>
-        table {
-            font-family: arial, sans-serif;
-            border-collapse: collapse;
-            width: 100%;
-        }
-
-        td, th {
-            border: 1px solid #dddddd;
-            text-align: left;
-            padding: 8px;
-        }
-
-        tr:nth-child(odd) {
-            background-color: #dddddd;
-        }
-    </style>
-    <table>
+    <table class="table1">
         <tr>
-            <th>Name</th>
+            <th>Service name</th>
             <th>Input types</th>
             <th>Output type</th>
             <th>Service description</th>
@@ -54,7 +34,7 @@
             <td>Storage</td>
             <td>string (fileName), byte[] (fileContents)</td>
             <td>string (path on server)</td>
-            <td>Stores a file in the Files directory. Given the name of the file & its contents, it returns the URL of the file on the server.</td>
+            <td>Stores a file in the Files directory in the BankingServices project. Given the file path, it returns the URL of the file in the BankingServices project.</td>
             <td></td>
         </tr>
     </table>

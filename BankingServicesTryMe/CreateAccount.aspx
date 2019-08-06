@@ -53,26 +53,9 @@
             </div>
         </div>
     </div>
-    <style>
-        table {
-            font-family: arial, sans-serif;
-            border-collapse: collapse;
-            width: 100%;
-        }
-
-        td, th {
-            border: 1px solid #dddddd;
-            text-align: left;
-            padding: 8px;
-        }
-
-        tr:nth-child(odd) {
-            background-color: #dddddd;
-        }
-    </style>
-    <table>
+    <table class="table1">
         <tr>
-            <th>Name</th>
+            <th>Service name</th>
             <th>Input types</th>
             <th>Output type</th>
             <th>Service description</th>
@@ -82,8 +65,8 @@
             <td>CreateAccount</td>
             <td>string (account number), string (account owner), string (account balance)</td>
             <td>string (account nickname)</td>
-            <td>It uses the account number to generate an account nickname. It generates a temporary password by using "123" (uses owner as salt). It stores the account number, nickname, owner, password, & balance in Accounts.xml.</td>
-            <td>Uses LINQ to XML. Invokes HashService Hasher restful service written by Govinda Escobar at http://localhost:54118/Service.svc  It uses SHA512CryptoServiceProvider & generates a password by using the user name as salt & hashing it with the password. Uses a balance of zero if input balance is invalid.</td>
+            <td>It uses the account number to generate an account nickname. It generates a temporary password by using "123" (uses owner as salt). It stores the account number, nickname, owner, password, & balance in the Accounts.xml in the BankingServices project.</td>
+            <td>Uses LINQ to XML. Invokes HashService Hasher restful service written by Govinda Escobar at http://localhost:54118/Service.svc  It uses SHA512CryptoServiceProvider. The salt will be updated to be a 128 bit random number. Uses a balance of zero if input balance is invalid.</td>
         </tr>
     </table>
 </asp:Content>
