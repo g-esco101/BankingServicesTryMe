@@ -35,7 +35,7 @@
             <td>string (fileName), byte[] (fileContents)</td>
             <td>string (path on server)</td>
             <td>Stores a file in the Files directory in the BankingServices project. Given the file path, it returns the URL of the file in the BankingServices project.</td>
-            <td></td>
+            <td>Adds a number to the file name if it exists</td>
         </tr>
     </table>
 </asp:Content>

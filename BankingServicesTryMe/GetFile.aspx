@@ -24,7 +24,7 @@
                     </div>
                 </div>
                 <div class="form-group">
-                    <div class="col-md-offset-6 col-md-10">
+                    <div>
                         <asp:Label ID="Status" runat="server"></asp:Label>
                     </div>
                 </div>
@@ -43,7 +43,7 @@
             <td>GetFile</td>
             <td>string (fileName)</td>
             <td>string (file contents)</td>
-            <td>Given the file name in the File directory in the BankingServices project, it returns the contents of the file as a string. </td>
+            <td>Given the file name in the File directory in the BankingServices project, it returns the contents as a string. </td>
             <td></td>
         </tr>
     </table>

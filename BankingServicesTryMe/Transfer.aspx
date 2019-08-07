@@ -78,7 +78,7 @@
             <td>string (source account nickname), string (destination account nickname), string (amount)</td>
             <td>string (source account new balance)</td>
             <td>Given the account nicknames & the amount, it transfers the amount from the source account to the destination account, updates the balances in the Accounts.xml file in the BankingServices project,  & returns the source account's new balance.</td>
-            <td>Uses TransactionScope to ensure both accounts are updated. Uses LINQ to XML. Invokes BankingRestServices Addition & Subtraction restful service written by Govinda Escobar at http://localhost:54118/Service.svc </td>
+            <td>Uses LINQ to XML. Consumes BankingRestServices Addition & Subtraction RESTful service written by Govinda Escobar at http://localhost:54118/Service.svc </td>
         </tr>
     </table>
 </asp:Content>

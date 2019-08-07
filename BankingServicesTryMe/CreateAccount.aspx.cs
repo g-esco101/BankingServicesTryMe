@@ -17,7 +17,7 @@ namespace BankingServicesTryMe
         protected void createAccount(object sender, EventArgs e)
         {
             ServiceReference1.myInterfaceClient myPxy = new ServiceReference1.myInterfaceClient();
-            Nickname.Text = myPxy.CreateAccount(AccountNumber.Text, AccountOwner.Text, AccountBalance.Text);
+            Nickname.Text = myPxy.CreateAccount(AccountNumber.Text, AccountOwner.Text, AccountBalance.Text, Password.Text);
             myPxy.Close();          
         }
     }

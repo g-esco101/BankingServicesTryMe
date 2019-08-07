@@ -28,10 +28,10 @@ namespace BankingServicesTryMe.ServiceReference1 {
         System.Threading.Tasks.Task<string> StorageAsync(string fileName, byte[] fileContents);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/myInterface/CreateAccount", ReplyAction="http://tempuri.org/myInterface/CreateAccountResponse")]
-        string CreateAccount(string accountNumber, string owner, string balance);
+        string CreateAccount(string accountNumber, string owner, string balance, string password);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/myInterface/CreateAccount", ReplyAction="http://tempuri.org/myInterface/CreateAccountResponse")]
-        System.Threading.Tasks.Task<string> CreateAccountAsync(string accountNumber, string owner, string balance);
+        System.Threading.Tasks.Task<string> CreateAccountAsync(string accountNumber, string owner, string balance, string password);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/myInterface/Transfer", ReplyAction="http://tempuri.org/myInterface/TransferResponse")]
         string Transfer(string source, string destination, string amount);
@@ -125,12 +125,12 @@ namespace BankingServicesTryMe.ServiceReference1 {
             return base.Channel.StorageAsync(fileName, fileContents);
         }
         
-        public string CreateAccount(string accountNumber, string owner, string balance) {
-            return base.Channel.CreateAccount(accountNumber, owner, balance);
+        public string CreateAccount(string accountNumber, string owner, string balance, string password) {
+            return base.Channel.CreateAccount(accountNumber, owner, balance, password);
         }
         
-        public System.Threading.Tasks.Task<string> CreateAccountAsync(string accountNumber, string owner, string balance) {
-            return base.Channel.CreateAccountAsync(accountNumber, owner, balance);
+        public System.Threading.Tasks.Task<string> CreateAccountAsync(string accountNumber, string owner, string balance, string password) {
+            return base.Channel.CreateAccountAsync(accountNumber, owner, balance, password);
         }
         
         public string Transfer(string source, string destination, string amount) {

@@ -40,6 +40,14 @@
                     </div>
                 </div>
                 <div class="form-group">
+                    <asp:Label runat="server" AssociatedControlID="Password" CssClass="col-md-6 control-label">Password</asp:Label>
+                    <div class="col-md-6">
+                        <asp:TextBox runat="server" ID="Password" CssClass="form-control" />
+                        <asp:RequiredFieldValidator runat="server" ControlToValidate="Password"
+                            CssClass="text-danger" ErrorMessage="The password field is required." />
+                    </div>
+                </div>
+                <div class="form-group">
                     <div class="col-md-offset-6 col-md-6">
                         <asp:Label runat="server" AssociatedControlID="Nickname">Account nickname</asp:Label>
                         <asp:Label runat="server" ID="Nickname"></asp:Label>
@@ -65,8 +73,8 @@
             <td>CreateAccount</td>
             <td>string (account number), string (account owner), string (account balance)</td>
             <td>string (account nickname)</td>
-            <td>It uses the account number to generate an account nickname. It generates a temporary password by using "123" (uses owner as salt). It stores the account number, nickname, owner, password, & balance in the Accounts.xml in the BankingServices project.</td>
-            <td>Uses LINQ to XML. Invokes HashService Hasher restful service written by Govinda Escobar at http://localhost:54118/Service.svc  It uses SHA512CryptoServiceProvider. The salt will be updated to be a 128 bit random number. Uses a balance of zero if input balance is invalid.</td>
+            <td>Adds account number, nickname, owner, password, & balance to Accounts.xml in the BankingServices project. It uses the account number to generate an account nickname.</td>
+            <td>Uses LINQ to XML. Uses a balance of zero if input balance is invalid.</td>
         </tr>
     </table>
 </asp:Content>

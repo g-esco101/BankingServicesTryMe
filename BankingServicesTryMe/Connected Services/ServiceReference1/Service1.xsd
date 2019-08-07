@@ -35,6 +35,7 @@
         <xs:element minOccurs="0" name="accountNumber" nillable="true" type="xs:string" />
         <xs:element minOccurs="0" name="owner" nillable="true" type="xs:string" />
         <xs:element minOccurs="0" name="balance" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="password" nillable="true" type="xs:string" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>

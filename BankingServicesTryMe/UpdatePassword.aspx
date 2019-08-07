@@ -70,8 +70,8 @@
             <td>UpdatePassword</td>
             <td>string (account owner), string (current password), string (new password), string (new password)</td>
             <td>boolean</td>
-            <td>Returns true if the password is updated successfully in the Accounts.xml in the BankingServices project.</td>
-            <td>Uses LINQ to XML. Consumes the RESTful HashService written by Govinda Escobar at http://localhost:54118/Service.svc. It uses SHA512CryptoServiceProvider & generates a password by using the user name as salt & hashing it with the password (the salt will be updated to be a 128 bit random number).</td>
+            <td>Returns true if the password is updated successfully in  Accounts.xml.</td>
+            <td>Uses LINQ to XML - uses the current password & owner to find the account. Then it updates it with the new password.</td>
         </tr>
     </table>
 </asp:Content>
